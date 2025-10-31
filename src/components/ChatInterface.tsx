@@ -254,30 +254,36 @@ const ChatInterface = ({ onBack }: ChatInterfaceProps) => {
             </div>
           </div>
 
-          {/* Language Selector */}
+          {/* Language Selector - FIXED */}
           <div className="flex items-center gap-3">
             <Languages className="w-5 h-5" style={{ color: '#6B6B6B' }} />
             <Select value={language} onValueChange={setLanguage}>
               <SelectTrigger 
-                className="w-[200px] border-2"
+                className="w-[200px] border-2 [&>span]:text-gray-900 text-gray-900"
                 style={{ 
                   borderColor: '#E5E5E5',
                   backgroundColor: 'white',
                   color: '#1A1A1A'
                 }}
               >
-                <SelectValue placeholder="Select language" />
+                <SelectValue 
+                  placeholder="Select language"
+                  className="text-gray-900 placeholder:text-gray-500"
+                />
               </SelectTrigger>
-              <SelectContent style={{ backgroundColor: 'white' }}>
-                <SelectItem value="en">English</SelectItem>
-                <SelectItem value="hi">Hindi (हिंदी)</SelectItem>
-                <SelectItem value="ta">Tamil (தமிழ்)</SelectItem>
-                <SelectItem value="te">Telugu (తెలుగు)</SelectItem>
-                <SelectItem value="bn">Bengali (বাংলা)</SelectItem>
-                <SelectItem value="mr">Marathi (मराठी)</SelectItem>
-                <SelectItem value="gu">Gujarati (ગુજરાતી)</SelectItem>
-                <SelectItem value="kn">Kannada (ಕನ್ನಡ)</SelectItem>
-                <SelectItem value="ml">Malayalam (മലയാളം)</SelectItem>
+              <SelectContent 
+                style={{ backgroundColor: 'white' }}
+                className="bg-white"
+              >
+                <SelectItem value="en" className="text-gray-900">English</SelectItem>
+                <SelectItem value="hi" className="text-gray-900">Hindi (हिंदी)</SelectItem>
+                <SelectItem value="ta" className="text-gray-900">Tamil (தமிழ்)</SelectItem>
+                <SelectItem value="te" className="text-gray-900">Telugu (తెలుగు)</SelectItem>
+                <SelectItem value="bn" className="text-gray-900">Bengali (বাংলা)</SelectItem>
+                <SelectItem value="mr" className="text-gray-900">Marathi (मराठी)</SelectItem>
+                <SelectItem value="gu" className="text-gray-900">Gujarati (ગુજરાતી)</SelectItem>
+                <SelectItem value="kn" className="text-gray-900">Kannada (ಕನ್ನಡ)</SelectItem>
+                <SelectItem value="ml" className="text-gray-900">Malayalam (മലയാളം)</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -496,3 +502,4 @@ const ChatInterface = ({ onBack }: ChatInterfaceProps) => {
 };
 
 export default ChatInterface;
+
