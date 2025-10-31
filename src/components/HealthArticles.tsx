@@ -268,19 +268,19 @@ const pageLabels = {
   },
   mr: {
     title: "आरोग्य आणि कल्याण लेख",
-    subtitle: "चांगल्या आरोग्य आणि कल्याणासाठी पुराव्यावर आधारित तज्ज्ञ मार्गदर्शन — कल्याणाची तत्त्वे समजून घेण्यास आणि निरोगी सवयी लावण्यास मदत."
+    subtitle: "चांगल्या आरोग्य आणि कल्याणासाठी पुराव्यावर आधारित तज्ज्ञ मार्गदर्शन — कल्याणाची तत्त्वे समजून घेण्यास आणि निरोगी सवयी लावण्यास मदत।"
   },
   gu: {
     title: "આરોગ્ય અને સ્વસ્થતા લેખો",
-    subtitle: "શ્રેષ્ઠ આરોગ્ય અને સ્વસ્થતા માટે પુરાવા-આધારિત નિષ્ણાત માર્ગદર્શન — સ્વસ્થતાના સિદ્ધાંતો સમજવામાં અને તંદુરસ્ત આદતો અપનાવવામાં મદદ."
+    subtitle: "શ્રેષ્ઠ આરોગ્ય અને સ્વસ્થતા માટે પુરાવા-આધારિત નિષ્ણાત માર્ગદર્શન — સ્વસ્થતાના સિદ્ધાંતો સમજવામાં અને તંદુરસ્ત આદતો અપનાવવામાં મદદ।"
   },
   kn: {
     title: "ಆರೋಗ್ಯ ಮತ್ತು ಕಲ್ಯಾಣ ಲೇಖನಗಳು",
-    subtitle: "ಅತ್ಯುತ್ತಮ ಆರೋಗ್ಯ ಮತ್ತು ಕಲ್ಯಾಣಕ್ಕೆ ಪುರಾವೆ-ಆಧಾರಿತ ತಜ್ಞ ಮಾರ್ಗದರ್ಶನ — ಕಲ್ಯಾಣ ತತ್ವಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಮತ್ತು ಆರೋಗ್ಯಕರ ಅಭ್ಯಾಸಗಳನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳಲು ಸಹಾಯ."
+    subtitle: "ಅತ್ಯುತ್ತಮ ಆರೋಗ್ಯ ಮತ್ತು ಕಲ್ಯಾಣಕ್ಕೆ ಪುರಾವೆ-ಆಧಾರಿತ ತಜ್ಞ ಮಾರ್ಗದರ್ಶನ — ಕಲ್ಯಾಣ ತತ್ವಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಮತ್ತು ಆರೋಗ್ಯಕರ ಅಭ್ಯಾಸಗಳನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳಲು ಸಹಾಯ।"
   },
   ml: {
     title: "ആരോഗ്യ & ക്ഷേമ ലേഖനങ്ങൾ",
-    subtitle: "അനുയോജ്യമായ ആരോഗ്യത്തിനും ക്ഷേമത്തിനുമുള്ള തെളിവ് അടിസ്ഥാനമാക്കിയ വിദഗ്ധ മാർഗനിർദേശം — ക്ഷേമ തത്വങ്ങൾ മനസ്സിലാക്കാനും ആരോഗ്യകര ശീലങ്ങൾ നടപ്പാക്കാനും സഹായം."
+    subtitle: "അനുയോജ്യമായ ആരോഗ്യത്തിനും ക്ഷേമത്തിനുമുള്ള തെളിവ് അടിസ്ഥാനമാക്കിയ വിദഗ്ധ മാർഗനിർദേശം — ക്ഷേമ തത്വങ്ങൾ മനസ്സിലാക്കാനും ആരോഗ്യകര ശീലങ്ങൾ നടപ്പാക്കാനും സഹായം।"
   }
 };
 
@@ -324,23 +324,29 @@ const HealthArticles = ({ onBack }: HealthArticlesProps) => {
             </div>
           </div>
 
-          {/* Language Selector */}
+          {/* Language Selector - FIXED */}
           <div className="flex items-center gap-3">
             <Languages className="w-5 h-5" style={{ color: '#6B6B6B' }} />
             <Select value={language} onValueChange={setLanguage}>
               <SelectTrigger 
-                className="w-[200px] border-2"
+                className="w-[200px] border-2 [&>span]:text-gray-900 text-gray-900"
                 style={{ 
                   borderColor: '#E5E5E5',
                   backgroundColor: 'white',
                   color: '#1A1A1A'
                 }}
               >
-                <SelectValue placeholder="Select language" />
+                <SelectValue 
+                  placeholder="Select language"
+                  className="text-gray-900 placeholder:text-gray-500"
+                />
               </SelectTrigger>
-              <SelectContent style={{ backgroundColor: 'white' }}>
+              <SelectContent 
+                style={{ backgroundColor: 'white' }}
+                className="bg-white"
+              >
                 {Object.entries(languageNames).map(([code, name]) => (
-                  <SelectItem key={code} value={code}>
+                  <SelectItem key={code} value={code} className="text-gray-900">
                     {name}
                   </SelectItem>
                 ))}
