@@ -1,73 +1,112 @@
-# Welcome to your Lovable project
+# Veeva Health Buddy
 
-## Project info
+A comprehensive healthcare companion application that provides personalized health management, appointment booking, diet planning, and healthcare resource access.
 
-**URL**: https://lovable.dev/projects/322d4c12-9d5e-42b7-9f36-ee030dca1154
+## Features
 
-## How can I edit this code?
+- **AI-Powered Chat Interface**: Interactive health consultation and guidance
+- **Appointment Booking**: Schedule medical appointments with ease
+- **Diet Planner**: Personalized nutrition and meal planning
+- **Healthcare Map**: Locate free healthcare facilities near you
+- **Health Articles**: Access curated health-related content
+- **Report Analyzer**: AI-powered medical report analysis
+- **Voice Integration**: Voice-enabled interaction support
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+### Frontend
+- **React 18+** with TypeScript
+- **Vite** for fast development and building
+- **Tailwind CSS** for styling
+- **shadcn/ui** for UI components
+- **Supabase** for backend services and authentication
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/322d4c12-9d5e-42b7-9f36-ee030dca1154) and start prompting.
+### Backend Services
+- **Supabase Functions**
+  - Health Chat Integration
+  - Report Analysis Service
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Setup
 
-**Use your preferred IDE**
+### Prerequisites
+- Node.js (v16.0 or higher)
+- npm or Bun package manager
+- Git
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation Steps
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/hsrshithrx/hackx.git
+   cd veeva-health-buddy-main
+   ```
 
-Follow these steps:
+2. **Install dependencies**
+   ```bash
+   # Using npm
+   npm install
+   # OR using Bun
+   bun install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Environment Setup**
+   - Create a `.env` file in the root directory
+   - Add the following environment variables:
+     ```
+     VITE_SUPABASE_URL=your_supabase_url
+     VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+     ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. **Start Development Server**
+   ```bash
+   npm run dev
+   # OR
+   bun run dev
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+5. **Build for Production**
+   ```bash
+   npm run build
+   # OR
+   bun run build
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ui/             # UI components from shadcn
+│   └── ...             # Feature components
+├── hooks/              # Custom React hooks
+├── integrations/       # External service integrations
+│   └── supabase/      # Supabase client and types
+├── lib/               # Utility libraries
+├── pages/             # Page components
+└── utils/             # Utility functions
 ```
 
-**Edit a file directly in GitHub**
+## Development Guidelines
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Use TypeScript for type safety
+- Follow the component structure in `src/components`
+- Use shadcn/ui components for consistent UI
+- Implement responsive design using Tailwind CSS
+- Add proper error handling and loading states
+- Write clean, documented code
 
-**Use GitHub Codespaces**
+## Contributing
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## What technologies are used for this project?
+## License
 
-This project is built with:
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Support
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/322d4c12-9d5e-42b7-9f36-ee030dca1154) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+For support, please open an issue in the GitHub repository or contact the development team.
